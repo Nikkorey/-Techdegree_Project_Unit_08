@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  color: #7c7c7c;
+  font-family: "Proza Libre", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.container {
+  padding: 2rem 1rem;
+}
+
+input {
+  width: 80%;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.employee {
+  border: 0.1rem solid;
+  border-radius: 0.2rem;
+}
