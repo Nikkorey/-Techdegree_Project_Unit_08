@@ -20,18 +20,3 @@ body {
 .container {
   padding: 2rem 1rem;
 }
-
-input {
-  width: 80%;
-  padding: 1rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-rows: repeat(12, 1fr);
-}
-
-.employee {
-  border: 0.1rem solid;
-  border-radius: 0.2rem;
-}

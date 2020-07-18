@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.employee {
+  border: 0.1rem solid;
+  border-radius: 1rem;
+}

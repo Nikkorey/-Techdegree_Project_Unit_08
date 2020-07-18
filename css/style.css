@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  color: #7c7c7c;
+  font-family: "Proza Libre", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.container {
+  padding: 2rem 1rem;
+}
+
+.header {
+  padding: 3rem;
+}
+
+input {
+  margin-top: 2rem;
+  width: 90%;
+  padding: 1rem;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[12];
+      grid-template-rows: repeat(12, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.employee {
+  border: 0.1rem solid;
+  border-radius: 1rem;
+}
