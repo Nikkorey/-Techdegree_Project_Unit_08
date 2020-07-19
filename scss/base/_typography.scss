@@ -1,0 +1,11 @@
+.heading__prim {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .heading__prim {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
