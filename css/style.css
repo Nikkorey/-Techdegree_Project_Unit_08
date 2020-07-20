@@ -15,16 +15,23 @@ body {
   font-family: "Proza Libre", sans-serif;
   line-height: 1.5;
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 1rem 4rem;
   max-width: 1100px;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 8rem 5rem;
+  }
+}
+
 .heading__prim {
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -36,7 +43,8 @@ body {
 }
 
 .header {
-  padding: 3rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 input {
@@ -56,6 +64,8 @@ input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
+    margin-bottom: 4rem;
   }
   input {
     width: 30%;
@@ -74,7 +84,7 @@ input {
 }
 
 .employee {
-  padding: 2rem;
+  padding: 1rem 2rem;
   border: 0.1rem solid;
   border-radius: 1rem;
   display: -webkit-box;
@@ -86,6 +96,7 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #979ca0;
 }
 
 .employee__image {
@@ -97,6 +108,11 @@ input {
   margin-left: 2rem;
 }
 
+.employee__name {
+  font-size: 1.8rem;
+  color: #4a535a;
+}
+
 @media (min-width: 768px) {
   .grid {
     -ms-grid-columns: (1fr)[2];
@@ -104,12 +120,13 @@ input {
     -ms-grid-rows: (1fr)[6];
         grid-template-rows: repeat(6, 1fr);
   }
+  .employee {
+    padding: 2rem 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .grid {
-    margin: 0 auto;
-    width: 1050px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

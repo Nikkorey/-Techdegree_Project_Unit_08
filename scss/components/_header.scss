@@ -1,5 +1,6 @@
 .header {
-  padding: 3rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 input {
@@ -13,6 +14,8 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
+    margin-bottom: 4rem;
   }
 
   input {

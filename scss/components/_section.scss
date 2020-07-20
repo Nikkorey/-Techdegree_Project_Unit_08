@@ -7,13 +7,13 @@
 }
 
 .employee {
-  padding: 2rem;
+  padding: 1rem 2rem;
   border: 0.1rem solid;
-
   border-radius: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #979ca0;
 
   &__image {
     width: 100px;
@@ -23,6 +23,11 @@
   &__info {
     margin-left: 2rem;
   }
+
+  &__name {
+    font-size: 1.8rem;
+    color: #4a535a;
+  }
 }
 
 @media (min-width: 768px) {
@@ -30,12 +35,13 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
+  .employee {
+    padding: 2rem 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .grid {
-    margin: 0 auto;
-    width: 1050px;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
