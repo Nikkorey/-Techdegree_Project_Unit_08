@@ -14,6 +14,11 @@
   justify-content: flex-start;
   align-items: center;
   color: #979ca0;
+  cursor: pointer;
+
+  &:hover {
+    border: black;
+  }
 
   &__image {
     width: 100px;
