@@ -20,7 +20,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 1rem 4rem;
+  padding: 0.5rem 1rem;
   max-width: 1100px;
 }
 
@@ -76,15 +76,13 @@ input {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[12];
-      grid-template-rows: repeat(12, 1fr);
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   grid-gap: 1.5rem;
 }
 
 .employee {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   border: 0.1rem solid;
   border-radius: 1rem;
   display: -webkit-box;
