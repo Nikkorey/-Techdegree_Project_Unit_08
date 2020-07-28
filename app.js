@@ -1,4 +1,6 @@
 import showEmployee from "./src/showEmployee.js";
+import "./src/searchForm.js";
+import "./src/modal.js";
 
 const URL = "https://randomuser.me/api/?results=12";
 

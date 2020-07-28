@@ -1,4 +1,4 @@
-.header {
+.search-form {
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -10,7 +10,7 @@ input {
 }
 
 @media (min-width: 768px) {
-  .header {
+  .search-form {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -7,17 +7,26 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Employee Directory</title>
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <form class="search-form">
         <h1 class="heading__prim">Awesome Startup Employee Directory</h1>
-        <input type="text" placeholder="Search for an Employee.." />
-      </header>
+        <input
+          type="text"
+          placeholder="Search for an Employee.."
+          name="users"
+        />
+      </form>
 
       <section class="grid">
+        <h2 class="title"></h2>
         <!-- <div class="employee employee2">
           <img src="./img/Profile_photo_about2.jpg" alt="" /
           class="employee__image">
@@ -26,107 +35,29 @@
             <p class="employee__email">asfsa</p>
             <p class="employee__place">fasfsa</p>
           </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
-        </div>
-
-        <div class="employee">
-          <img src="" alt="" / class="employee__image">
-          <div class="employee__info">
-            <h2 class="employee__name"></h2>
-            <p class="employee__email"></p>
-            <p class="employee__place"></p>
-          </div>
         </div> -->
       </section>
+
+      <div class="modal__overlay">
+        <div class="modal__container">
+          <i class="fa fa-times close__btn"></i>
+          <img src="./img/Profile_photo_about2.jpg" alt="" /
+          class="employee__image">
+          <i class="fa fa-chevron-left"></i>
+          <i class="fa fa-chevron-right"></i>
+          <div class="modal__content">
+            <h2 class="employee__name">Daniel Lowe</h2>
+            <p class="employee__email">daniel.lowe@example.com</p>
+            <p class="employee__place">Detroit</p>
+            <hr />
+            <p class="employee__tel">(545)-129-2619</p>
+            <p class="employee__address">
+              1464 Blossom Hill Rd, Louisiana 28135
+            </p>
+            <p class="employee__birth">2/5/1984</p>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="app.js"></script>
   </body>

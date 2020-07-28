@@ -20,13 +20,13 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   max-width: 1100px;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 8rem 5rem;
+    padding: 4rem 5rem;
   }
 }
 
@@ -42,7 +42,7 @@ body {
   }
 }
 
-.header {
+.search-form {
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -54,7 +54,7 @@ input {
 }
 
 @media (min-width: 768px) {
-  .header {
+  .search-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -78,7 +78,12 @@ input {
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .employee {
@@ -88,9 +93,10 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -108,7 +114,7 @@ input {
 }
 
 .employee__info {
-  margin-left: 2rem;
+  margin-top: 1.5rem;
 }
 
 .employee__name {
@@ -118,13 +124,25 @@ input {
 
 @media (min-width: 768px) {
   .grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[6];
-        grid-template-rows: repeat(6, 1fr);
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
   }
   .employee {
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .employee__info {
+    margin-left: 2rem;
+    text-align: left;
+  }
+  .employee__email {
+    font-size: 1.3rem;
   }
 }
 
@@ -133,10 +151,71 @@ input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (1fr)[4];
-        grid-template-rows: repeat(4, 1fr);
+    -ms-grid-columns: (33.33%)[3];
+        grid-template-columns: repeat(3, 33.33%);
     grid-gap: 2.5rem;
   }
+  .employee__email {
+    font-size: 1.5rem;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(64, 68, 71, 0.5);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal__container {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  width: 300px;
+}
+
+.modal__content {
+  margin-top: 2rem;
+}
+
+hr {
+  margin: 3rem 0;
+}
+
+.employee__address {
+  margin: 1rem 0;
+}
+
+.fa {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.fa-times {
+  top: 2rem;
+  right: 2.5rem;
+}
+
+.fa-chevron-left {
+  top: 11rem;
+  left: 5rem;
+}
+
+.fa-chevron-right {
+  top: 11rem;
+  right: 5rem;
 }

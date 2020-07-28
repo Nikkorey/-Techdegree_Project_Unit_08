@@ -1,0 +1,57 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(64, 68, 71, 0.5);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal__container {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  width: 300px;
+}
+
+.modal__content {
+  margin-top: 2rem;
+}
+
+hr {
+  margin: 3rem 0;
+}
+
+.employee__address {
+  margin: 1rem 0;
+}
+
+.fa {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.fa-times {
+  top: 2rem;
+  right: 2.5rem;
+}
+.fa-chevron-left {
+  top: 11rem;
+  left: 5rem;
+}
+
+.fa-chevron-right {
+  top: 11rem;
+  right: 5rem;
+}
