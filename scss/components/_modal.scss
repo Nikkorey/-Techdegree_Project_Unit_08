@@ -9,8 +9,10 @@
   place-items: center;
   visibility: hidden;
   z-index: -10;
+  border: solid;
 }
 
+// Open/Close Modal
 .open-modal {
   visibility: visible;
   z-index: 10;

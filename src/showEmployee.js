@@ -3,7 +3,7 @@ import displayEmployee from "./displayEmployee.js";
 
 const showEmployee = async (url) => {
   const data = await fetchApi(url);
-  console.log(data);
+  console.log(data.results);
   const section = await displayEmployee(data);
   console.log(section);
 };

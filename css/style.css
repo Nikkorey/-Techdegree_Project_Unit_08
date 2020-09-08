@@ -172,6 +172,7 @@ input {
   place-items: center;
   visibility: hidden;
   z-index: -10;
+  border: solid;
 }
 
 .open-modal {

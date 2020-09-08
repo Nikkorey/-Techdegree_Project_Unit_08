@@ -1,21 +1,19 @@
 import get from "./getElement.js";
+import getAll from "./getAllElement.js";
 
-const grid = get(".grid");
 var div = "";
 
-function displayEmployee(data) {
-  // const title = get(".title");
-  // if (!data) {
-  //   title.texContent = "sorry, no drinks matched your search";
-  //   grid.innerHTML = null;
-  // }
-  data.results.forEach((person) => {
-    const name = `${person.name.first} ${person.name.last}`;
-    const email = `${person.email}`;
-    const place = `${person.location.country}`;
-    const image = `${person.picture.large}`;
-    div += `
-        <article class="employee employee2">
+const displayEmployee = (data) => {
+  const grid = get(".grid");
+  const employeeList = data.results
+    .map((employee) => {
+      const name = `${employee.name.first} ${employee.name.last}`;
+      const email = `${employee.email}`;
+      const place = `${employee.location.country}`;
+      const image = `${employee.picture.large}`;
+
+      return `
+          <article class="employee">
             <img src="${image}" alt="${name}" /
             class="employee__image">
             <div class="employee__info">
@@ -23,26 +21,68 @@ function displayEmployee(data) {
               <p class="employee__email">${email}</p>
               <p class="employee__place">${place}</p>
             </div>
-        </article>
-        `;
+          </article>
+            `;
+    })
+    .join("");
+  grid.innerHTML = employeeList;
 
-    grid.innerHTML = div;
-  });
+  const employee = document.querySelectorAll(".employee");
+  employee.forEach((employeeCard) => {
+    employeeCard.addEventListener("click", (e) => {
+      const modal = get(".modal__overlay");
+      modal.classList.toggle("open-modal");
 
-  const employee = get(".grid .employee");
-  const modalOver = get(".modal__overlay");
-  const modalClo = get(".close__btn");
+      const employeeList = data.results
+        .map((employee, employeeIndex) => {
+          const name = `${employee.name.first} ${employee.name.last}`;
+          const email = `${employee.email}`;
+          const place = `${employee.location.country}`;
+          const image = `${employee.picture.large}`;
 
-  employee.addEventListener("click", () => {
-    modalOver.classList.add("open-modal");
-    console.log(employee);
-  });
+          let position = "next";
+          if (employeeIndex === 0) {
+            position = "active";
+          }
+          if (employeeIndex === data.results.length - 1) {
+            position = "last";
+          }
 
-  modalClo.addEventListener("click", () => {
-    modalOver.classList.remove("open-modal");
+          return `
+              <div class="modal__container ${position}">
+                <i class="fa fa-times close__btn"></i>
+                <i class="fa fa-chevron-left"></i>
+                <i class="fa fa-chevron-right"></i>
+                <div class="modal__content">
+                  <img src="${image}" alt="" /
+                  class="employee__image">
+                  <h2 class="employee__name">${name}</h2>
+                  <p class="employee__email">${email}</p>
+                  <p class="employee__place">${place}</p>
+                  <hr />
+                  <p class="employee__tel">(545)-129-2619</p>
+                  <p class="employee__address">
+                    1464 Blossom Hill Rd, Louisiana 28135
+                  </p>
+                  <p class="employee__birth">2/5/1984</p>
+                </div>
+            </div>`;
+        })
+        .join("");
+
+      modal.innerHTML = employeeList;
+
+      const closeBtn = get(".close__btn");
+      closeBtn.addEventListener("click", closeButton);
+    });
   });
 
   return grid;
+};
+
+function closeButton() {
+  const modal = get(".modal__overlay");
+  modal.classList.remove("open-modal");
 }
 
 export default displayEmployee;
